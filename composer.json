@@ -1,0 +1,6 @@
+{
+  "name": "tivwp/tivwp-debug-bar",
+  "description": "A WordPress `Debug Bar` plugin extension used by TIVWP projects.",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0"
+}

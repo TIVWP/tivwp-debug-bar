@@ -12,4 +12,4 @@ A WordPress `Debug Bar` plugin extension used by TIVWP projects.
 Gregory Karpinsky (@tivnet)
 
 ## License
-GPL
+GPL-3.0
