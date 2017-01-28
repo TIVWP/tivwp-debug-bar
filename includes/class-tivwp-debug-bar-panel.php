@@ -15,7 +15,7 @@ class TIVWP_Debug_Bar_Panel extends Debug_Bar_Panel {
 		<?php
 
 		$allowed_tags = array(
-			'a'   => true,
+			'a'   => array( 'href' => true ),
 			'br'  => true,
 			'pre' => true,
 		);
