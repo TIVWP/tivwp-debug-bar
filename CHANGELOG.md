@@ -3,6 +3,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.4] 2017-03-10
+
+- Moved `kses` from output to the `add` method.
+- Added `output_add_wrapped()` method.
+
 ## [0.0.3] 2017-01-28
 ### Fixed
 

@@ -14,12 +14,6 @@ class TIVWP_Debug_Bar_Panel extends Debug_Bar_Panel {
 		<hr />
 		<?php
 
-		$allowed_tags = array(
-			'a'   => array( 'href' => true ),
-			'br'  => true,
-			'pre' => true,
-		);
-
-		echo wp_kses( implode( '<br/>', TIVWP_Debug_Bar::getOutput() ), $allowed_tags );
+		echo implode( '<hr/>', TIVWP_Debug_Bar::getOutput() );
 	}
 }

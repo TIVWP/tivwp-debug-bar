@@ -6,6 +6,17 @@
 class TIVWP_Debug_Bar {
 
 	/**
+	 * Tags allowed in strings added via regular @see output_add
+	 * @var array
+	 */
+	protected static $allowed_tags = array(
+		'a'   => array( 'href' => true ),
+		'br'  => true,
+		'pre' => true,
+		'xmp' => true,
+	);
+
+	/**
 	 * Collect strings for the output here.
 	 *
 	 * @var string[]
@@ -27,7 +38,17 @@ class TIVWP_Debug_Bar {
 	 * @param string $string_to_add
 	 */
 	public static function output_add( $string_to_add ) {
-		self::$output[] = $string_to_add;
+		self::$output[] = wp_kses( $string_to_add, self::$allowed_tags );
+	}
+
+	/**
+	 * Add string to the output stack, wrapped by a tag.
+	 *
+	 * @param string $string_to_add
+	 * @param string $wrap_with The tag. Default is 'xmp';
+	 */
+	public static function output_add_wrapped( $string_to_add, $wrap_with = 'xmp' ) {
+		self::$output[] = "<$wrap_with>$string_to_add</$wrap_with>";
 	}
 
 	/**
